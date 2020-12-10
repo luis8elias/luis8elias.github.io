@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- hojas de estilos -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/examples.css">
+
+    <!-- scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/menu.js"></script>
+
+    <!-- fuente montserrat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+
+    <title>Manual CSS</title>
+</head>
+<body>
+
+
+    <header class="header-container">
+
+        <div class="menu-icon" id="menuButton">
+
+            <i class="las la-bars" ></i>
+            
+        </div>
+
+        <div class="menu-icon hidden"  id="menuButtonClose" >
+
+            <i class="las la-times"></i>
+            
+        </div>
+
+        <div class="header-content">
+
+            <div>
+                <img src="img/icons/css.png" alt="css_icon" class="header-icon">
+            </div>
+
+            <h1>
+                Manual CSS
+            </h1>
+
+        </div>
+
+    </header>
+
+
+    <aside id="aside">
+
+        <nav class="menu-nav">
+            <ul>
+                <li class="menu-divider"><i class="las la-keyboard"></i>SINTAXIS CSS</li>
+
+                <li><a name="menu-item"  href="#selector">selector</a></li>
+                <li><a name="menu-item" href="#propiedad">propiedad </a></li>
+                <li><a name="menu-item" href="#valor">valor</a></li>
+
+                <li class="menu-divider"><i class="las la-hand-pointer"></i></i> SELECTOR </li>
+
+                <li><a name="menu-item" href="#SelectorUniversal"> universal</a></li>
+                <li><a name="menu-item" href="#SelectorDeTipo"> de tipo</a></li>
+                <li><a name="menu-item" href="#SelectorPorID"> por Id</a></li>
+                <li><a name="menu-item" href="#SelectorDeClase"> de clase</a></li>
+                <li><a name="menu-item" href="#SelectorDeAtributo"> de atributo</a></li>
+                <li><a name="menu-item" href="#SelectorDePseudoclase">de pseudoclase</a></li>
+                <li><a name="menu-item" href="#SelectorDeDescendiente"> de descendiente</a></li>
+               
+
+                <li class="menu-divider"><i class="las la-box"></i> MODELO DE CAJA </li>
+
+                <li><a name="menu-item" href="#width">width</a></li>
+                <li><a name="menu-item" href="#height">height</a></li>
+                <li><a name="menu-item" href="#margin">margin</a></li>
+                <li><a name="menu-item" href="#padding">padding</a></li>
+                <li><a name="menu-item" href="#border">border</a></li>
+
+                <li class="menu-divider"><i class="las la-border-style"></i> BORDES </li>
+
+                <li><a name="menu-item" href="#border-color">border-color</a></li>
+                <li><a name="menu-item" href="#border-style">border-style</a></li>
+                <li><a name="menu-item" href="#border-radius">border-radius</a></li>
+
+                <li class="menu-divider"><i class="las la-font"></i> FUENTES Y TEXTO </li>
+
+                <li><a name="menu-item" href="#font-family">font-family</a></li>
+                <li><a name="menu-item" href="#font-size">font-size</a></li>
+                <li><a name="menu-item" href="#font-weight">font-weight</a></li>
+                <li><a name="menu-item" href="#font-style">font-style</a></li>
+                <li><a name="menu-item" href="#text-decoration">text-decoration</a></li>
+                <li><a name="menu-item" href="#text-align">text-align</a></li>
+                <li><a name="menu-item" href="#letter-spacing">letter-spacing</a></li>
+                <li><a name="menu-item" href="#line-height">line-height</a></li>
+
+                <li class="menu-divider"><i class="las la-palette"></i> COLOR Y FONDOS</li>
+
+                <li><a name="menu-item" href="#color">color</a></li>
+                <li><a name="menu-item" href="#background-color">background-color</a></li>
+                <li><a name="menu-item" href="#background-image">background-image</a></li>
+                <li><a name="menu-item" href="#background-repeat">background-repeat</a></li>
+                <li><a name="menu-item" href="#opacity">opacity</a></li>
+                <li><a name="menu-item" href="#box-shadow">box-shadow</a></li>
+
+                <li class="menu-divider"><i class="las la-list"></i> LISTAS </li>
+
+                <li><a name="menu-item" href="#list-style-image">list-style-image</a></li>
+                <li><a name="menu-item" href="#list-style-type">list-style-type</a></li>
+
+            </ul>
+        </nav>
+
+    </aside>
+   
+
+    <main id="content">
+
+
+
+        <!-- SINTAXIS CSS -->
+        <div class="section-divider"><i class="las la-keyboard"></i>SINTAXIS CSS</div>
+
+
+
+        <section class="card">
+           <span class="indicator"  id="selector"></span>
+           <div class="section-header">
+                <h2 class="title" >Selector</h2>
+           </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Estos nos indican a que elemento o elementos se les aplicaran las
+                        propiedades  css que definamos. Hay varias formas de seleccionar elementos.
+                        Como lo son el selector de tipo, el selector de clase, por ID, selector universal,
+                        combinador de descendientes. Tambien es importante destacar que existen Pseudoclases
+                        tales como hover, visited, entre otras. Para ver cada uno de estor ir a la seccion 
+                        de selector en el menu. 
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                        <img src="/img/examples/selector.png" alt="ej.Selector" class="img-example">
+                </article>
+               
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="propiedad"></span>
+            <div class="section-header">
+                 <h2 class="title" >Propiedad</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Son las reglas css que se le aplican a los elementos tales como: color de fondo,
+                        tamaño de fuente,  bordes, espaciado, margenes , opacidad entre otros.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p> 
+                        Como se puede ver, la propiedad es lo que esta antes de los dos puntos,
+                        e indica que es lo que se modifcará. En este ejemplo estariamos cambiando el tamaño 
+                        de la fuente a 18px.
+                    </p>
+                    <img src="/img/examples/propiedad.png" alt="ej.Propiedad" class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+        
+        <section class="card">
+            <span class="indicator"  id="valor"></span>
+            <div class="section-header">
+                 <h2 class="title" >Valor</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Como su nombre lo indica pues especifica el valor de una propiedad css , 
+                        estas pueden ser colores, tamaños, palabras clave, entre otras.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p> 
+                        Como se puede ver, el valor es lo que esta a la derecha de los dos puntos,
+                        e indica que valor tomará la propiedad. En este ejemplo estableceriamos un color
+                        blanco como fondo .
+                    </p>
+                    <img src="/img/examples/valor.png" alt="ej.Valor" class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+
+        <!-- SELECTOR -->
+        <div class="section-divider"><i class="las la-hand-pointer"></i>SELECTOR</div>
+
+
+
+
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorUniversal"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector Universal</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        La sintaxis de esta es poner un asterisco.
+                        De esta forma seleccionamos todos los elementos.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/universal.png" alt="ej.SelectorUniversal" 
+                                                                                class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorDeTipo"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector de Tipo</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        De esta forma seleccionamos todos los elementos que tengan esta etiqueta.
+                        En este ejemplo estariamos seleccionando todos los elementos que tengan 
+                        la etiqueta button.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/de_tipo.png" alt="ej.SelectorDeTipo" class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorPorID"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector por Id</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        La sintaxis de esta es poner un simbolo del gato o tambien conocido como numeral 
+                        antes del id. De esta forma seleccionamos el elemento por un id establecido.
+                        En este ejemplo estariamos seleccionando a un elemento con id="titulo".
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/por_id.png" alt="ej.SelectorDeTipo" class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorDeClase"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector de Clase</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        La sintaxis de esta es poner un punto antes del nombre de la clase.
+                        De esta forma seleccionamos todos los elementos que tengan esta clase 
+                        en el atributo class. En este ejemplo estariamos seleccionando todos los 
+                        elementos que tengan la clase container.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/de_clase.png" alt="ej.SelectorDeClase" 
+                    class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorDeAtributo"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector de atributo</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        La sintaxis de esta es poner el elemnto y entre corchetes el atributo por
+                        el cual se quiere seleccionar.En este ejemplo estariamos seleccionando
+                        todos los elementos &lt;a&gt; que tengan un href y cominecen con #.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/por_attr.png" alt="ej.SelectorPorAtributo"  class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorDePseudoclase"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector de Pseudoclase</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Las pseudoclases hacen referencia a un estado de un elmento.
+                        La sintaxis de esta es poner dos puntos despues de haber seleccionado 
+                        al elemento y despues la pseudoclase.En este ejemplo estariamos indicando
+                        que los estilos se aplicaran a un elemento con la clase container
+                        pero los estilos solo surtirán efecto al pasar el ratón sobre el elemento.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/pseudoclase_hover.png" alt="ej.PseudoclaseHover"
+                    class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="SelectorDeDescendiente"></span>
+            <div class="section-header">
+                 <h2 class="title">Selector de Descendiente</h2>
+            </div>
+            <div class="grid-1-2">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        La sintaxis de esta es poner un ESAPCIO entre el elmento padre y el descendiente.
+                        De esta forma seleccionamos todos los elementos que se encuentren dentro del 
+                        elemento padre. En este ejemplo estariamos seleccionando a todos los h2 que estan
+                        dentro de un div.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <img src="/img/examples/de_descendientes.png" alt="ej.SelectorPorAtributo" 
+                    class="img-example">
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- MODELO DE CAJA -->
+        <div class="section-divider"><i class="las la-box"></i>MODELO DE CAJA</div>
+
+
+
+
+
+
+
+        <section class="card">
+            <span class="indicator"  id="width"></span>
+            <div class="section-header">
+                 <h2 class="title">Width</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos especifica el ancho de un elemento.
+                        Las unidades de medida pueden ser en %, px, em, rem, vh, vw.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code1" spellcheck="false">height:200px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code1" 
+                     element_id = "element1"  property="width">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos controlar  el ancho 
+                        de este cuadro azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                         <div class="card-blue" id="element1">
+                         </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="height"></span>
+            <div class="section-header">
+                 <h2 class="title">Height</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos especifica la altura de un elemento.
+                        Las unidades de medida pueden ser en %, px, em, rem, vh, vw.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code2" spellcheck="false">height:150px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code2" 
+                     element_id = "element2"  property="height">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección de código podemos controlar la altura
+                        de este cuadro azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                         <div class="card-blue" id="element2">
+                         </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="margin"></span>
+            <div class="section-header">
+                 <h2 class="title">Margin</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos especifica un margen en los cuatro lados de un elemento.
+                        Es el espacio que está por fuera del elemento.
+                        Las unidades de medida pueden ser en %, px, em, rem, vh, vw.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code3" spellcheck="false">margin:10px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code3" 
+                     element_id = "element3"  property="margin">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección de código podemos  controlar el margen de
+                        este cuadro azul. 
+                        Nota2: por defecto el cuadro azul tiene un margen de 0px.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="card-black">
+                            <div class="card-blue" id="element3">
+                            </div>
+                       </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="padding"></span>
+            <div class="section-header">
+                 <h2 class="title">Padding</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos especifica un epacio entre el contenido y el borde
+                        en los cuatro lados de un elemento.
+                        Es el espacio dentro del elemento.
+                        Las unidades de medida pueden ser en %, px, em, rem, vh, vw.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code4" spellcheck="false">padding:10px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code4" 
+                     element_id = "element4"  property="padding">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el
+                        padding de este texto con fondo de color azul.
+                        Nota: introducir un valor válido para que este se aplique. 
+                        Nota2: por defecto el texto tiene un padding de 0px.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="padd-demo" id="element4">
+                            padding
+                        </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+        
+        <section class="card">
+            <span class="indicator"  id="border"></span>
+            <div class="section-header">
+                 <h2 class="title">Border</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos indica hasta donde termina un elemento.
+                        Se definen tres propiedades de una sola vez.
+                        El border-width, border-style y border-color
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code5" spellcheck="false">border:7px groove #F7576D;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code5" 
+                     element_id = "element5"  property="border">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el
+                        borde de este cuadro de color azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="card-blue" id="element5">
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- BORDES -->
+        <div class="section-divider"><i class="las la-border-style"></i>BORDES</div>
+         
+
+
+         
+        <section class="card">
+            <span class="indicator"  id="border-color"></span>
+            <div class="section-header">
+                 <h2 class="title">Border Color</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos definir de que color será el borde.
+                        acepta colores ya definidos como purple, red, colores en hexadecimal y
+                        rgb. 
+                       
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code6" spellcheck="false">border-color: #E35000;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code6" 
+                     element_id = "element6"  property="border-color">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el color
+                        del borde de este cuadro de color azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="card-blue demo-border-color" id="element6">
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="border-style"></span>
+            <div class="section-header">
+                 <h2 class="title">Border Style</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos definir el estilo del borde.
+                        acepta como valores : none, hidden, dotted, dashed, solid, double,
+                        groove, ridge, inset o outset;
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code7" spellcheck="false">border-style: ridge;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code7" 
+                     element_id = "element7"  property="border-style">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el color
+                        del borde de este cuadro de color azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="card-blue demo-border-style" id="element7">
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="border-radius"></span>
+            <div class="section-header">
+                 <h2 class="title">Border Radius</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos redondear las esquinas de un elemento.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code8" spellcheck="false">border-radius: 100px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code8" 
+                     element_id = "element8"  property="border-radius">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar que tan
+                        pronunciado es el redonde de las esquenas de este cuadro de color azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="card-blue" id="element8">
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- FUENTES Y TEXTO -->
+        <div class="section-divider"><i class="las la-font"></i>FUENTES Y TEXTO</div>
+
+
+
+
+       
+
+        <section class="card">
+            <span class="indicator"  id="font-family"></span>
+            <div class="section-header">
+                 <h2 class="title">Font Family</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos especificar una lista de familia de fuentes 
+                        con orden de prioridad que usara un elemento.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code9" spellcheck="false">font-family: 'Courier New';</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code9" 
+                     element_id = "element9"  property="font-family">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el font
+                        family de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element9">
+                            Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="font-size"></span>
+            <div class="section-header">
+                 <h2 class="title">Font Size</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos especificar de que tamaño será la fuente.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code10" spellcheck="false">font-size: 25px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code10" 
+                     element_id = "element10"  property="font-size">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar de que 
+                        tamaño  de este texto. 
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element10">
+                            Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="font-weight"></span>
+            <div class="section-header">
+                 <h2 class="title">Font Weight</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos especificar el grosor de la fuente.
+                        los valores pueden ser bold, normal, 100, 200, 300, 400, 500, 600,
+                        700, 800, 900.
+
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code11" spellcheck="false">font-weight: bold;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code11" 
+                     element_id = "element11"  property="font-weight">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el grosor 
+                        de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element11">
+                            Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+     
+        <section class="card">
+            <span class="indicator"  id="font-style"></span>
+            <div class="section-header">
+                 <h2 class="title">Font Style</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos cambiar el estilo de la fuente.
+                        los valores pueden ser normal, italic, oblique.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code12" spellcheck="false">font-style: italic;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code12" 
+                     element_id = "element12"  property="font-style">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el estilo
+                        de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element12">
+                            Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+          
+        <section class="card">
+            <span class="indicator"  id="text-decoration"></span>
+            <div class="section-header">
+                 <h2 class="title">Text Decoration</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Con esta propiedad  establecemos el formato de texto a subrayado con
+                         el valor underline, suprarrayado  con el valor overline,
+                          tachado con el valor line-through y parpadeo con el valor blink.
+
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code13" spellcheck="false">text-decoration: underline;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code13" 
+                     element_id = "element13"  property="text-decoration">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar la decoración 
+                        de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element13">
+                            Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+       
+
+
+        <section class="card">
+            <span class="indicator"  id="text-align"></span>
+            <div class="section-header">
+                 <h2 class="title">Text Align</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos controlar  la alineacion de textos y
+                        elementos en bloque
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code14" spellcheck="false">text-align: left;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code14" 
+                     element_id = "element14"  property="text-align">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar la alineación
+                        de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element14">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, 
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+        
+
+
+        <section class="card">
+            <span class="indicator"  id="letter-spacing"></span>
+            <div class="section-header">
+                 <h2 class="title">Letter Spacing</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                       Esta propiead CSS define un espacio entre caracteres.
+                       Los valores que acepta son : normal, initial, o un tamaño.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code15" spellcheck="false">letter-spacing: 3px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code15" 
+                     element_id = "element15"  property="letter-spacing">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el grosor 
+                        de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element15">
+                            Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="line-height"></span>
+            <div class="section-header">
+                 <h2 class="title">Line Height</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos controlar el espacio entre líneas base de texto.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code16" spellcheck="false">line-height: 50px;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code16" 
+                     element_id = "element16"  property="line-height">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el espacio entre lineas 
+                        de este texto. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element16">
+                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, consequatur.
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, explicabo!
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+        
+        
+        <!-- COLOR Y FONDOS -->
+        <div class="section-divider"><i class="las la-palette"></i>COLOR Y FONDOS</div>
+
+
+
+
+        <section class="card">
+            <span class="indicator"  id="color"></span>
+            <div class="section-header">
+                 <h2 class="title">Color</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos seleccionar el valor de color de primer plano 
+                        del contenido de elemento de texto y decoraciones de texto.
+                        Recibe como vaor un color en hexadecimal o RGB o plabaras clave.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code17" spellcheck="false">color: #CA1C5B;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code17" 
+                     element_id = "element17"  property="color">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el color de este texto.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="demo-font" id="element17">
+                          Hola soy un texto
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+
+        <section class="card">
+            <span class="indicator"  id="background-color"></span>
+            <div class="section-header">
+                 <h2 class="title">Background Color</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos cambiar el color de fondo 
+                        de un elemento. Recibe como valor un color en hexadecimal o RGB o plabaras clave.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code18" spellcheck="false">background-color: #A81CCA;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code18" 
+                     element_id = "element18"  property="background-color">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar el color de fondo de 
+                         de este cuadrito.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="card-blue" id="element18">
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="background-image"></span>
+            <div class="section-header">
+                 <h2 class="title">Background Image</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos establecer una o mas imagenes de fondo.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code19" spellcheck="false">background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png");</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code19" 
+                     element_id = "element19"  property="background-image">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  poner una imagen de fondoa  este
+                        cuadro azul.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <div class="back-image" id="element19">
+                        </div>
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <span class="indicator"  id="background-repeat"></span>
+            <div class="section-header">
+                 <h2 class="title">Background Repeat</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad con la que podemos estabelcer como se repiten los fondos.
+                        Pueden ser repetidos tanto vertical como hhorizontal.
+                        Acpeta valores de repeat, repeat-y, repeat-x, no-repeat.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code20" spellcheck="false">background-repeat: repeat-y;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code20" 
+                     element_id = "element20"  property="background-repeat">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección  de código podemos  controlar como se repite
+                         una imagen.
+                    </p>
+                    <br>
+                    <div class="repeat" id="element20">
+                       
+                   </div>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="opacity"></span>
+            <div class="section-header">
+                 <h2 class="title">Opacity</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos especifica la transaprecncia de
+                        un elemento. Permite valores entre 0 y 1.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code21" spellcheck="false">opacity:0.5;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code21" 
+                     element_id = "element21"  property="opacity">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección de código podemos controlar la opacidad
+                        de este cuadro azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                         <div class="card-blue" id="element21">
+                         </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="box-shadow"></span>
+            <div class="section-header">
+                 <h2 class="title">Box Shadow</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos permite añadir sombras alrededor de un elemento.
+                        se pueden poner varias sombras separandolas con una coma.
+                        El primer valor es el Offset del eje X si es un valor positivo la sombra se moverá
+                        a al derecha , si es negativo ira a la izquierda . El segundo valor es el Offset en
+                        el eje Y , si se el da un valor positivo  la sombra irá hacia abajo , para hacer 
+                        la sombra hacia arriba basta con poner este valor negativo , despues le sigue el 
+                        blur-radius y con este le indicamos que tan borrosa sera la sombra, 
+                        por último tenemos el color de la sombra.
+
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code22" spellcheck="false">box-shadow: 10px 5px 10px gray;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code22" 
+                     element_id = "element22"  property="box-shadow">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección de código podemos controlar la sombra
+                        de este cuadro azul.
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                         <div class="card-blue" id="element22">
+                         </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+        <!-- LISTAS -->
+        <div class="section-divider"><i class="las la-list"></i>LISTAS</div>
+       
+
+
+
+
+        <section class="card">
+            <span class="indicator"  id="list-style-image"></span>
+            <div class="section-header">
+                 <h2 class="title">List Style Image</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos permite añadir imagenes como marcador
+                        en un listado.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code23" spellcheck="false">list-style-image: url(/img/triangulo.png);</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code23" 
+                     element_id = "element23"  property="list-style-image">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección de código podemos controlar la imagen que se usara
+                       como marcador de la lista
+                        Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <ul class="ul-demo" id="element23" >
+                            <li>Hola 1</li>
+                            <li>Hola 2</li>
+                            <li>Hola 3</li>
+                        </ul>
+                        </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="card">
+            <span class="indicator"  id="list-style-type"></span>
+            <div class="section-header">
+                 <h2 class="title">List Style Type</h2>
+            </div>
+            <div class="grid-1-3">
+                <article >
+                    <h3 class="subtitle">Descripción</h3>
+                    <p> 
+                        Es la propiedad que nos permite especificar como marcador
+                        en un listado. los valores que acepta son : disc, circle, square,
+                        decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek,
+                        lower-latin, upper latin, armenian, georgian, lower-alpha, upper-alpha
+                        y none.
+                    </p>
+                </article>
+                <article>
+                    <h3 class="subtitle">Código</h3>
+                    <textarea class="code" id="code24" spellcheck="false">list-style-type: square;</textarea>
+                    <button class="mybutton" name="trigger" text_area_id = "code24" 
+                     element_id = "element24"  property="list-style-type">
+                         Aplicar
+                    </button>
+                </article>
+                <article>
+                    <h3 class="subtitle">Ejemplo</h3>
+                    <p>
+                        Por medio de la caja de la sección de código podemos controlar el marcador 
+                        de la lista. Nota: introducir un valor válido para que este se aplique.
+                    </p>
+                    <br>
+                    <div class="demo">
+                        <ul class="ul-demo" id="element24">
+                            <li>Hola 1</li>
+                            <li>Hola 2</li>
+                            <li>Hola 3</li>
+                        </ul>
+                        </div>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+    
+    <footer>Creado por Luis Elias el 10/12/2020 </footer>
+    
+</body>
+</html>

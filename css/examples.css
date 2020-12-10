@@ -1,0 +1,97 @@
+:root{
+
+
+
+    /* colores */
+    --bg-color: #F8F8F8;
+    --bg-card: #fff;
+    --accent-color : #13ABAD;
+    --txt-title : #5e5873;
+    --txt-main :#6e6b7b;
+ 
+}
+
+.demo{
+
+    height: 200px;
+    background-color: var(--bg-color);
+    border: 2px dashed var(--txt-title);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+
+.card-blue{
+    background-color: var(--accent-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: 0.3s linear;
+    height: 50px;
+    width: 50px;
+
+}
+
+.card-black{
+    background-color: #282C34;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: 0.3s linear;
+    height: auto;
+    width: auto;
+
+}
+
+.padd-demo{
+
+    font-size: 1.8rem;
+    background-color: var(--accent-color);
+    color:var(--bg-card);
+    transition: 0.3s linear;
+    border-radius: 5px;
+    padding: 0px;
+
+}
+
+.demo-border-color{
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+.demo-border-style{
+    border-width: 5px;
+    border-color: #ED9E0A;
+}
+
+
+.demo-font{
+    font-size: 1.8rem;
+    color: var(--txt-main);
+    text-align: center;
+}
+
+.back-image{
+    background-color: var(--accent-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: 0.3s linear;
+    height: 150px;
+    width: 150px;
+    background-size: 100% 100%;
+}
+
+
+.repeat{
+    height: 200px;
+    border: 2px dashed var(--txt-title);
+    background-image: url(/img/cerdo.png);
+    resize: both;
+    overflow: hidden;
+}
+
+.ul-demo{
+    font-size: 2.5rem;;
+}
